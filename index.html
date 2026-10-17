@@ -7,7 +7,7 @@
 <meta name="description" content="Marina Negru, photographe à Paris & Île-de-France : love story, mariage, famille, événements et mode. Séances en français, русский, română.">
 <meta property="og:title" content="Marina Negru — Photographe à Paris">
 <meta property="og:description" content="Love story, mariage, famille, événements. Paris & Île-de-France. FR • RU • RO">
-<meta property="og:image" content="img/love-01.jpg">
+<meta property="og:image" content="https://marinanegru.com/img/hero-wedding.jpg">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +54,7 @@
   .btn.ghost { background: transparent; color: var(--ink); }
   .btn.ghost:hover { background: var(--ink); color: var(--bg); }
   .hero-img { position: relative; }
-  .hero-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .hero-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 25%; }
   .hero-img .small { position: absolute; width: 34%; left: -17%; bottom: -40px; border: 8px solid var(--bg); aspect-ratio: 2/3; object-fit: cover; }
   @media (max-width: 1240px) { .hero-img .small { display: none; } }
 
@@ -167,12 +167,12 @@
     <div>
       <p class="eyebrow" data-i18n="hero_eyebrow">Photographe · Paris & Île-de-France</p>
       <h1 data-i18n-html="hero_title">Votre histoire.<br>Vos émotions.<br><em>Vos souvenirs.</em></h1>
-      <p class="lead" data-i18n="hero_lead">Love story, mariages, familles et événements — des images vivantes et lumineuses, au cœur de Paris.</p>
+      <p class="lead" data-i18n="hero_lead">Mariages, love story, familles et événements — des images vivantes et lumineuses, au cœur de Paris.</p>
       <a class="btn" href="#contact" data-i18n="cta_book">Réserver une séance</a>
       <a class="btn ghost" href="#portfolio" data-i18n="cta_see">Voir le portfolio</a>
     </div>
     <div class="hero-img">
-      <img src="img/love-01.jpg" alt="Love story à Paris au coucher du soleil" fetchpriority="high">
+      <img src="img/hero-wedding.jpg" alt="Mariage à Paris — les mariés enlacés" fetchpriority="high">
       <img class="small" src="img/love-03-s.jpg" alt="Portrait noir et blanc dans une rue de Paris">
     </div>
   </div>
@@ -185,6 +185,7 @@
       </div>
       <div class="tabs" role="tablist">
         <button data-cat="all" class="on" data-i18n="tab_all">Tout</button>
+        <button data-cat="wedding" data-i18n="tab_wedding">Mariage</button>
         <button data-cat="love">Love story</button>
         <button data-cat="family" data-i18n="tab_family">Famille</button>
         <button data-cat="fashion" data-i18n="tab_fashion">Mode & événements</button>
@@ -198,11 +199,11 @@
       <div class="center reveal">
         <p class="eyebrow" data-i18n="sv_eyebrow">Prestations</p>
         <h2 data-i18n="sv_title">Ce que je photographie</h2>
-        <p class="sub" data-i18n="sv_sub">Chaque séance est préparée avec vous : lieux, lumière, tenues et ambiance.</p>
+        <p class="sub" data-i18n="sv_sub">Chaque séance est préparée avec vous : lieux, lumière, tenues et ambiance. Photo uniquement, sans vidéo.</p>
       </div>
       <div class="services">
         <div class="card reveal">
-          <img src="img/love-07-s.jpg" alt="" loading="lazy">
+          <img src="img/wedding-11-s.jpg" alt="" loading="lazy">
           <h3 data-i18n="s1_t">Mariage</h3>
           <p data-i18n="s1_d">Des préparatifs à la soirée, toute l'émotion de votre jour J.</p>
         </div>
@@ -280,6 +281,7 @@
 const MESSENGER_URL = "";
 
 const PHOTOS = {
+  wedding: 20,
   love: 11,
   family: 12,
   fashion: 6
@@ -291,10 +293,10 @@ const T = {
     nav_portfolio: "Портфолио", nav_services: "Услуги", nav_about: "Обо мне", nav_contact: "Контакты",
     hero_eyebrow: "Фотограф · Париж и Иль-де-Франс",
     hero_title: "Ваша история.<br>Ваши эмоции.<br><em>Ваши воспоминания.</em>",
-    hero_lead: "Love story, свадьбы, семейные съёмки и мероприятия — живые и светлые кадры в самом сердце Парижа.",
+    hero_lead: "Свадьбы, love story, семейные съёмки и мероприятия — живые и светлые кадры в самом сердце Парижа.",
     cta_book: "Записаться на съёмку", cta_see: "Смотреть портфолио",
-    pf_title: "Избранные моменты", tab_all: "Все", tab_family: "Семья", tab_fashion: "Мода и события",
-    sv_eyebrow: "Услуги", sv_title: "Что я снимаю", sv_sub: "Каждую съёмку мы готовим вместе: место, свет, образы и настроение.",
+    pf_title: "Избранные моменты", tab_all: "Все", tab_wedding: "Свадьба", tab_family: "Семья", tab_fashion: "Мода и события",
+    sv_eyebrow: "Услуги", sv_title: "Что я снимаю", sv_sub: "Каждую съёмку мы готовим вместе: место, свет, образы и настроение. Только фото, без видео.",
     s1_t: "Свадьба", s1_d: "От сборов до вечера — все эмоции вашего главного дня.",
     s2_d: "Прогулка по Парижу на рассвете или закате, только вы вдвоём.",
     s3_t: "Семья", s3_d: "Нежные и естественные моменты с детьми на природе.",
@@ -315,10 +317,10 @@ const T = {
     nav_portfolio: "Portofoliu", nav_services: "Servicii", nav_about: "Despre mine", nav_contact: "Contact",
     hero_eyebrow: "Fotograf · Paris & Île-de-France",
     hero_title: "Povestea voastră.<br>Emoțiile voastre.<br><em>Amintirile voastre.</em>",
-    hero_lead: "Love story, nunți, familii și evenimente — imagini vii și luminoase, în inima Parisului.",
+    hero_lead: "Nunți, love story, familii și evenimente — imagini vii și luminoase, în inima Parisului.",
     cta_book: "Rezervă o ședință foto", cta_see: "Vezi portofoliul",
-    pf_title: "Momente alese", tab_all: "Toate", tab_family: "Familie", tab_fashion: "Modă & evenimente",
-    sv_eyebrow: "Servicii", sv_title: "Ce fotografiez", sv_sub: "Fiecare ședință o pregătim împreună: locația, lumina, ținutele și atmosfera.",
+    pf_title: "Momente alese", tab_all: "Toate", tab_wedding: "Nuntă", tab_family: "Familie", tab_fashion: "Modă & evenimente",
+    sv_eyebrow: "Servicii", sv_title: "Ce fotografiez", sv_sub: "Fiecare ședință o pregătim împreună: locația, lumina, ținutele și atmosfera. Doar foto, fără video.",
     s1_t: "Nuntă", s1_d: "De la pregătiri până la petrecere — toate emoțiile zilei voastre.",
     s2_d: "O plimbare prin Paris la răsărit sau la apus, doar voi doi.",
     s3_t: "Familie", s3_d: "Momente tandre și naturale cu copiii, în aer liber.",
